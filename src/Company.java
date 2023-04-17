@@ -7,16 +7,22 @@ public class Company {
 
     // Set missing values to null
     public Company(String name){
-
+        this.name = name;
+        streetAddress = null;
+        city = null;
+        state = null;
     }
 
 
     public Company(String name, String streetAddress, String city, String state){
-
+        this.name = name;
+        this.streetAddress = streetAddress;
+        this.city = city;
+        this.state = state;
     }
 
     public String getName(){
-
+        return name;
     }
 
     /**
@@ -25,7 +31,7 @@ public class Company {
      * Springfield, OH
      */
     public String address(){
-
+        return streetAddress + "\n" + city + ", " + state;
     }
 
     /**
@@ -35,6 +41,6 @@ public class Company {
      * Springfield, OH
      */
     public String toString(){
-
+        return name + "\n" + this.address();
     }
 }
